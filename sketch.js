@@ -71,7 +71,13 @@ function draw() {
     }
   }
 }
-
+window.onload = () => {
+  const iframe = document.getElementById('content-frame');
+  iframe.src = 'https://413730663.github.io/5/'; // 預載入自我介紹的內容
+  iframe.style.display = 'block'; // 顯示 iframe
+  const menu = document.getElementById('menu');
+  menu.style.transform = 'translateY(-100%)'; // 初始狀態隱藏選單
+};
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight); // 當視窗大小改變時調整畫布
 }
